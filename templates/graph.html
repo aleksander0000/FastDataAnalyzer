@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data plot</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='stylesheets/style.css') }}">
+
+</head>
+<body>
+<div class="topnav">
+  <a  href="/">import other file</a>
+  <a >aleksander.gietka0@gmail.com</a>
+</div>
+
+<img src={{image_data}}>
+{% block body %}
+    {{ first_table|safe }}
+<br><br>
+    {{ second_table|safe }}
+<br><br>
+    {{ third_table|safe }}
+{% endblock %}
+<br/>
+<button onclick="history.back()">go back</button>
+
+</body>
+</html>

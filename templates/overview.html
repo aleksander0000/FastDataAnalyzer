@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sample of data</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='stylesheets/style.css') }}">
+
+</head>
+<body>
+<div class="topnav">
+  <a  href="/">import other file</a>
+  <a >aleksander.gietka0@gmail.com</a>
+    <a >These are first 5 records from imported data</a>
+</div>
+
+{% block body %}
+    {{ sample|safe }}
+{% endblock %}
+<button onclick="location.href='{{url_for('static', filename='/statistics/')}}{{file}}'" type="button">
+         statistical properties</button>
+<button onclick="location.href='{{url_for('static', filename='/twodimensionplot/')}}{{file}}'" type = "button">
+         plot for two-dimensional data</button>
+<button onclick="location.href='{{url_for('static', filename='/twodimensionreggresion/')}}{{file}}'" type="button">
+         linear models visualization for two-dimensional data</button>
+<br><br><br><br><br><br><br><br>
+Under development
+<br>
+<button onclick="" type="button">
+         basic date analysis <br>for natural language</button>
+<button onclick="" type = "button">
+         data prediction <br> machine learning models</button>
+<button onclick="" type="button">
+         interactive plots <br>for 3-dimensional data </button>
+</body>
+</html>
